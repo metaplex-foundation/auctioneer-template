@@ -21,18 +21,7 @@ pub struct AuctioneerExecuteSale<'info> {
 
     // Accounts used for Auctioneer
     /// The Listing Config used for listing settings
-    #[account(
-        // seeds=[
-        //     LISTING_CONFIG.as_bytes(),
-        //     seller.key().as_ref(),
-        //     auction_house.key().as_ref(),
-        //     token_account.key().as_ref(),
-        //     auction_house.treasury_mint.as_ref(),
-        //     token_mint.key().as_ref(),
-        //     &token_size.to_le_bytes()
-        // ],
-        // bump=listing_config.bump,
-    )]
+    #[account()]
     pub listing_config: Box<Account<'info, ListingConfig>>,
 
     // Accounts passed into Auction House CPI call
